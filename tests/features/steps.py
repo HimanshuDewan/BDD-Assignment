@@ -19,7 +19,7 @@ def step_for_mutiply(step, x, y):
     world.result = world.calc.multiply(int(x), int(y))
     
 #step for factorial
-@step(u'I input number "([^"]*)"') 
+@step(u'I input number "([^"]*)" factorial') 
 def step_for_factorial(step, x):
 	world.result = world.calc.factorial(int(x))
 

@@ -23,6 +23,12 @@ class Calculator(object):
         else:
             raise ValueError
 
+    def recurse(self,n):
+        if(n<=1):
+            return 1
+
+        return n*self.recurse(n-1)
+
 
     def factorial(self, n):
         number_types = (int, long)
@@ -31,7 +37,7 @@ class Calculator(object):
             if n < 0:
                 return None
             else:
-                return n*Calculator.factorial(self,n-1)
+                return self.recurse(n)
         else:
             raise ValueError
 
